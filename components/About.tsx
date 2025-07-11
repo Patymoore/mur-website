@@ -44,7 +44,7 @@ export default function About() {
           <div className="about-element fade-up lg:w-1/3">
             <div className="relative w-64 h-64 mx-auto">
               <Image
-                src="/profile_user.jpg"
+                src="/placeholder.svg?height=256&width=256"
                 alt="Patricio Moore"
                 width={256}
                 height={256}

@@ -151,11 +151,11 @@ export default function Contact() {
                     <span>GitHub</span>
                   </a>
                   <a
-                    href="mailto:patricio@mursolutions.com"
+                    href="mailto:patricio@murdatasolutions.com"
                     className="flex items-center space-x-3 text-grayL hover:text-accent transition-colors"
                   >
                     <Mail size={20} />
-                    <span>patricio@mursolutions.com</span>
+                    <span>patricio@murdatasolutions.com</span>
                   </a>
                 </div>
               </CardContent>

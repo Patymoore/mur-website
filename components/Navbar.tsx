@@ -29,7 +29,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-3">
             <Image
-              src="/iso.svg"
+              src="/placeholder.svg?height=40&width=40"
               alt="MUR Data Solutions"
               width={40}
               height={40}
