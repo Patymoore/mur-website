@@ -7,8 +7,7 @@ export default function Footer() {
     <footer className="border-t border-accent/20 py-8">
       <Container>
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-          <p className="text-grayL text-sm">© 2024 MUR Data Solutions. All rights reserved.</p>
-
+          <p className="text-grayL text-sm">© 2025 MUR Solutions. All rights reserved.</p> {/* Updated year */}
           <div className="flex items-center space-x-6">
             <a
               href={siteCopy.about.links.linkedin}

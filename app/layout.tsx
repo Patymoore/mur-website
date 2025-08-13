@@ -16,13 +16,22 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "MUR DATA SOLUTIONS - From Data to Impact",
+  title: "MUR SOLUTIONS - From Data to Impact",
   description:
     "Transform your business with data-driven insights, cloud infrastructure, and AI solutions. Expert data science consulting for Fortune 500 and SMEs.",
   openGraph: {
-    title: "MUR DATA SOLUTIONS - From Data to Impact",
+    title: "MUR SOLUTIONS - From Data to Impact",
     description: "Transform your business with data-driven insights, cloud infrastructure, and AI solutions.",
     type: "website",
+  },
+  // Favicon y iconos
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
     generator: 'v0.dev'
 }

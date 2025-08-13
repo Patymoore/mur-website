@@ -24,7 +24,7 @@ const caseStudies = [
   },
   {
     industry: "E-commerce",
-    company: "MediaMarkt",
+    company: "E-commerce Retailer",
     challenge: "Stores lacking real-time inventory visibility causing stockouts and delivery delays",
     solution: "Real-time inventory dashboards and automated alerts for store stock management",
     results: [

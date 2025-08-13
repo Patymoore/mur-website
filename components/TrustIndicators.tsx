@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { Shield, Award, Users, Zap } from "lucide-react"
+import { Shield, Users, Zap, TrendingDown } from "lucide-react"
 import Container from "./Container"
 
 const trustMetrics = [
@@ -12,10 +12,10 @@ const trustMetrics = [
     description: "Enterprise-grade reliability",
   },
   {
-    icon: Award,
-    value: "GDPR",
-    label: "Compliant",
-    description: "Data privacy certified",
+    icon: TrendingDown,
+    value: "Up to 60%",
+    label: "Reduction in Manual Tasks",
+    description: "Automating data workflows to boost efficiency",
   },
   {
     icon: Users,

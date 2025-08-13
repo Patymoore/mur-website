@@ -8,7 +8,7 @@ export const colors = {
 
 export const siteCopy = {
   hero: {
-    headline: "MUR DATA SOLUTIONS",
+    headline: "MUR SOLUTIONS",
     tagline: "From data to impact",
     cta: "Book a discovery call",
   },
@@ -37,10 +37,35 @@ export const siteCopy = {
     "40% less manual reporting time, compliance dashboards in real time",
   ],
   about: {
-    bio: `Patricio Moore — MSc in Data Science & Big Data, 10+ years turning pipelines and predictive AI into business impact. Hands-on with Fortune 500 and high-growth SMEs.`,
+    founders: [
+      {
+        name: "Patricio Moore",
+        bio: "MSc in Data Science & Big Data, 10+ years in end-to-end AI & data workflows. Impact across Fortune 500 & high-growth SMEs. Expert in driving efficiency & strategic value with advanced tools.",
+        links: {
+          linkedin: "https://www.linkedin.com/in/patricio-moore-bb3b2b121/",
+          github: "https://github.com/Patymoore",
+        },
+      },
+      {
+        name: "Mariano Carchio",
+        bio: "Communication Expert with 10+ years in entertainment & personal care industries. Skilled in client relations across diverse audiences. Strong people management and leadership attitude. Proven ability to build trust and drive team performance.",
+        links: {
+          linkedin: "#",
+          github: "#",
+        },
+      },
+      {
+        name: "Mathias Moore",
+        bio: "Civil Engineer turned Data Leader. 5+ years leading analytics & cultural data transformation. Delivered end-to-end data projects in early-stage orgs. Focus on impact, adoption & long-term value across the data stack.",
+        links: {
+          linkedin: "#",
+          github: "#",
+        },
+      },
+    ],
     links: {
-      linkedin: "https://www.linkedin.com/in/patricio-moore-bb3b2b121/",
-      github: "https://github.com/Patymoore",
+      linkedin: "https://www.linkedin.com/company/mur-solutions",
+      github: "https://github.com/mur-solutions",
     },
   },
 }
