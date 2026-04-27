@@ -6,28 +6,28 @@ import Container from "./Container"
 
 const trustMetrics = [
   {
-    icon: Shield,
-    value: "99.9%",
-    label: "Uptime Guarantee",
-    description: "Enterprise-grade reliability",
+    icon: Zap,
+    value: "3–5 weeks",
+    label: "Time to Live",
+    description: "First agent deployed and running",
   },
   {
     icon: TrendingDown,
     value: "Up to 60%",
     label: "Reduction in Manual Tasks",
-    description: "Automating data workflows to boost efficiency",
+    description: "Staff time reclaimed by automation",
   },
   {
     icon: Users,
-    value: "Fortune 500",
-    label: "Clients",
-    description: "Trusted by industry leaders",
+    value: "SMB-first",
+    label: "Built for Small Business",
+    description: "No enterprise budget required",
   },
   {
-    icon: Zap,
+    icon: Shield,
     value: "< 48h",
-    label: "Response Time",
-    description: "Priority support included",
+    label: "Support Response",
+    description: "Direct access to your team",
   },
 ]
 

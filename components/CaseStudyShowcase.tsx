@@ -8,47 +8,52 @@ import Container from "./Container"
 
 const caseStudies = [
   {
-    industry: "E-commerce",
-    company: "Global Retail Chain",
+    industry: "Food & Beverage",
+    company: "La Taberna — 3-location tapas group, Madrid",
     challenge:
-      "Invoice, receipt and transaction duplicates and missing entries in accounting system causing losses and imbalances",
-    solution: "End-to-end dashboards with alerts to track complete order lifecycle from generation to accounting",
+      "Reservation phone line overwhelmed at peak hours. Staff spending 2+ hours/day on calls and manual reminder messages, leading to a 28% no-show rate.",
+    solution:
+      "AI booking agent deployed via WhatsApp and Google Business. Handles reservations, sends automated reminders 24h and 2h before, and manages cancellations without staff involvement.",
     results: [
-      { icon: DollarSign, metric: "$1.3M/mo", label: "Revenue Protected", color: "text-green-400" },
-      { icon: TrendingUp, metric: "15%", label: "Error Reduction", color: "text-blue-400" },
-      { icon: Clock, metric: "24/7", label: "Automated Monitoring", color: "text-purple-400" },
+      { icon: TrendingUp, metric: "−35%", label: "No-show rate", color: "text-green-400" },
+      { icon: Clock, metric: "2h/day", label: "Staff time recovered", color: "text-blue-400" },
+      { icon: DollarSign, metric: "€6K/mo", label: "Revenue recovered", color: "text-purple-400" },
     ],
-    technologies: ["Python", "BigQuery", "SQL", "Data Studio"],
-    timeline: "12 weeks",
-    testimonial: "The end-to-end visibility eliminated our accounting discrepancies completely.",
+    technologies: ["WhatsApp Business API", "n8n", "OpenAI", "Google Calendar"],
+    timeline: "3 weeks",
+    testimonial: "We used to lose tables every weekend to no-shows. The agent basically paid for itself in the first month.",
   },
   {
-    industry: "E-commerce",
-    company: "E-commerce Retailer",
-    challenge: "Stores lacking real-time inventory visibility causing stockouts and delivery delays",
-    solution: "Real-time inventory dashboards and automated alerts for store stock management",
+    industry: "Food & Beverage",
+    company: "Brauhaus Collective — craft beer bar & kitchen, Barcelona",
+    challenge:
+      "Weekend order volume overloaded bar staff. Customers waited 15+ minutes for takeaway orders placed by phone. One staff member dedicated solely to answering calls.",
+    solution:
+      "AI customer service agent trained on the full menu, daily specials and kitchen capacity. Takes orders via WhatsApp, confirms estimated pickup time and notifies kitchen automatically.",
     results: [
-      { icon: Clock, metric: "30%", label: "Faster Delivery", color: "text-green-400" },
-      { icon: TrendingUp, metric: "+8 NPS", label: "Score Improvement", color: "text-blue-400" },
-      { icon: Shield, metric: "99.2%", label: "Stock Accuracy", color: "text-purple-400" },
+      { icon: Clock, metric: "−70%", label: "Phone call volume", color: "text-green-400" },
+      { icon: DollarSign, metric: "€1,500/mo", label: "Labour cost saved", color: "text-blue-400" },
+      { icon: TrendingUp, metric: "+11 NPS", label: "Customer satisfaction", color: "text-purple-400" },
     ],
-    technologies: ["Python", "BigQuery", "Airflow", "SQL", "Data Studio"],
-    timeline: "10 weeks",
-    testimonial: "Our stores now have complete visibility of inventory levels across all locations in real-time.",
+    technologies: ["WhatsApp Business API", "OpenAI", "Airtable", "Make"],
+    timeline: "4 weeks",
+    testimonial: "Customers love ordering by WhatsApp. Orders arrive clean, no misunderstandings, and my team can focus on the bar.",
   },
   {
-    industry: "Finance",
-    company: "Crypto Global Exchange",
-    challenge: "Manual compliance reporting consuming 40% of team resources",
-    solution: "Automated compliance dashboard with real-time regulatory monitoring",
+    industry: "Food & Beverage",
+    company: "Fresco & Co — catering & meal-prep delivery, Valencia",
+    challenge:
+      "Weekly supplier ordering done manually from spreadsheets. Frequent stockouts of key ingredients mid-week and over-ordering of perishables caused €3K/month in waste.",
+    solution:
+      "Inventory tracking agent integrated with their POS. Monitors stock daily, forecasts weekly usage based on order history and auto-drafts supplier orders for manager approval.",
     results: [
-      { icon: DollarSign, metric: "$700K", label: "OPEX Saved", color: "text-green-400" },
-      { icon: Clock, metric: "40%", label: "Time Reduction", color: "text-blue-400" },
-      { icon: Shield, metric: "Zero", label: "Compliance Fines", color: "text-purple-400" },
+      { icon: TrendingUp, metric: "−22%", label: "Food waste", color: "text-green-400" },
+      { icon: DollarSign, metric: "€2,800/mo", label: "Waste cost saved", color: "text-blue-400" },
+      { icon: Shield, metric: "Zero", label: "Stockout incidents/month", color: "text-purple-400" },
     ],
-    technologies: ["Python", "AWS", "Kubernetes", "SQL"],
-    timeline: "14 weeks",
-    testimonial: "We went from dreading audit season to having everything ready at the click of a button.",
+    technologies: ["Square POS API", "OpenAI", "Google Sheets", "n8n"],
+    timeline: "5 weeks",
+    testimonial: "I stopped doing Sunday night stock counts. The agent flags what we need before I even think about it.",
   },
 ]
 

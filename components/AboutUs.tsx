@@ -1,8 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import Image from "next/image"
-import { Linkedin, Github, Brain, Target, Users, Award, MessageSquare, Wrench } from "lucide-react"
+import { Bot, Target, Users, Award } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import Container from "./Container"
 
@@ -11,61 +10,37 @@ const missionValues = [
     icon: Target,
     title: "Our Mission",
     description:
-      "Transform businesses through data-driven insights, making complex analytics accessible and actionable for every organization.",
+      "Give small and mid-sized businesses access to AI tools that were previously only affordable at enterprise scale — practical agents that solve real operational problems from day one.",
   },
   {
     icon: Users,
     title: "Our Values",
     description:
-      "Transparency, innovation, and client success drive everything we do. We believe in building long-term partnerships, not just projects.",
+      "Transparency, fast iteration and measurable outcomes. We build with you, not for you — and we don't consider a project done until you can see the impact on your numbers.",
   },
   {
     icon: Award,
     title: "Our Approach",
     description:
-      "Hands-on collaboration with Fortune 500 and SMEs alike, delivering measurable results through proven methodologies and cutting-edge technology.",
+      "We start with one concrete pain point, deploy an agent in 3–5 weeks, and prove ROI before expanding. No big-bang projects, no months of consulting before you see anything.",
   },
 ]
 
-const founders = [
+const whyUs = [
   {
-    name: "Patricio Moore",
-    image: "/patricio.jpeg", // Updated placeholder
-    credentials: [
-      "MSc in Data Science & Big Data from leading university",
-      "10+ years in end-to-end AI & data workflows across industries",
-      "Proven impact across Fortune 500 companies & high-growth SMEs",
-      "Expert in driving efficiency & strategic value with advanced analytics tools",
-    ],
-    linkedin: "https://www.linkedin.com/in/patricio-moore-bb3b2b121/",
-    github: "https://github.com/Patymoore",
-    icon: Brain,
+    icon: Bot,
+    title: "AI-native from day one",
+    description: "We don't bolt AI onto legacy workflows. Every solution is designed around agents and automation.",
   },
   {
-    name: "Mathias Moore", // Reordered
-    image: "/mathias.jpg", // Updated placeholder
-    credentials: [
-      "Civil Engineer turned Data Leader",
-      "5+ years leading analytics & cultural data transformation",
-      "Delivered end-to-end data projects in early-stage orgs",
-      "Focus on impact, adoption & long-term value across the data stack",
-    ],
-    linkedin: "https://www.linkedin.com/in/mathias-moore-6ab4a1150/",
-    github: "#",
-    icon: Wrench,
+    icon: Target,
+    title: "F&B specialists",
+    description: "We understand reservations, kitchen ops, delivery, waste and labour cost — the metrics that matter in your industry.",
   },
   {
-    name: "Mariano Carchio", // Reordered
-    image: "/mariano.jpeg", // Updated placeholder
-    credentials: [
-      "Communication Expert with 10+ years in entertainment & personal care industries",
-      "Skilled in client relations across diverse audiences",
-      "Strong people management and leadership attitude",
-      "Proven ability to build trust and drive team performance",
-    ],
-    linkedin: "https://www.linkedin.com/in/marianocarchio/",
-    github: "#",
-    icon: MessageSquare,
+    icon: Users,
+    title: "Small team, direct access",
+    description: "You work directly with the people building your solution. No account managers, no handoffs.",
   },
 ]
 
@@ -102,12 +77,12 @@ export default function AboutUs() {
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-4">About Us</h2>
           <p className="font-inter text-lg text-grayL max-w-2xl mx-auto">
-            Transforming data into business impact through expertise, innovation, and proven results
+            We build AI agents for restaurants, bars and food businesses that want to automate operations without hiring more staff
           </p>
         </div>
 
         {/* Mission, Values, Approach */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {missionValues.map((item, index) => (
             <Card
               key={index}
@@ -126,73 +101,22 @@ export default function AboutUs() {
           ))}
         </div>
 
-        {/* Founders Section */}
-        <div className="mb-12">
-          <h3 className="font-montserrat font-bold text-2xl md:text-3xl text-white text-center mb-12">
-            Meet Our Founders
-          </h3>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {founders.map((founder, index) => (
-              <Card
-                key={index}
-                className="about-element fade-up bg-navy/50 border-grayD/30 hover:border-accent/50 transition-all duration-300 group"
-              >
-                <CardContent className="p-6">
-                  {/* Profile Image */}
-                  <div className="relative w-32 h-32 mx-auto mb-6">
-                    <Image
-                      src={founder.image || "/placeholder.svg"}
-                      alt={founder.name}
-                      width={128}
-                      height={128}
-                      className="rounded-full border-4 border-accent/30 group-hover:border-accent/50 transition-colors"
-                    />
-                    <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center group-hover:bg-accent/30 transition-colors">
-                      <founder.icon className="text-accent" size={20} />
-                    </div>
-                  </div>
-
-                  {/* Name */}
-                  <h4 className="font-montserrat font-bold text-xl text-white text-center mb-4 group-hover:text-accent transition-colors">
-                    {founder.name}
-                  </h4>
-
-                  {/* Credentials */}
-                  <div className="space-y-3 mb-6">
-                    {founder.credentials.map((credential, idx) => (
-                      <div key={idx} className="flex items-start space-x-2">
-                        <div className="w-2 h-2 bg-accent rounded-full mt-2 flex-shrink-0"></div>
-                        <p className="text-grayL text-sm leading-relaxed">{credential}</p>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Social Links */}
-                  <div className="flex justify-center space-x-4">
-                    <a
-                      href={founder.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-navy transition-colors"
-                    >
-                      <Linkedin size={18} />
-                    </a>
-                    {founder.github !== "#" && (
-                      <a
-                        href={founder.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center text-accent hover:bg-accent hover:text-navy transition-colors"
-                      >
-                        <Github size={18} />
-                      </a>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        {/* Why Us */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {whyUs.map((item, index) => (
+            <div
+              key={index}
+              className="about-element fade-up flex items-start space-x-4 p-4 rounded-lg border border-grayD/20 hover:border-accent/30 transition-colors"
+            >
+              <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <item.icon className="text-accent" size={20} />
+              </div>
+              <div>
+                <h4 className="font-montserrat font-semibold text-white mb-1">{item.title}</h4>
+                <p className="text-grayL text-sm leading-relaxed">{item.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </Container>
     </section>

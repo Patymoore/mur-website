@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar"
 import SolutionsSection from "@/components/SolutionsSection"
 import AboutUs from "@/components/AboutUs"
 import SuccessStories from "@/components/SuccessStories"
-import AboutTheProcess from "@/components/AboutTheProcess"
+import HowItWorks from "@/components/HowItWorks"
 import FAQs from "@/components/FAQs"
 import ContactUs from "@/components/ContactUs"
 import Footer from "@/components/Footer"
@@ -15,7 +15,7 @@ export default function Home() {
         <SolutionsSection />
         <AboutUs />
         <SuccessStories />
-        <AboutTheProcess />
+        <HowItWorks />
         <FAQs />
         <ContactUs />
       </main>

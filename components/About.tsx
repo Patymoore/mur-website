@@ -4,7 +4,6 @@ import { useEffect, useRef } from "react"
 import Image from "next/image"
 import { Linkedin, Github, GraduationCap, Briefcase, Brain, Building } from "lucide-react"
 import Container from "./Container"
-import { siteCopy } from "@/lib/constants"
 
 export default function About() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -54,7 +53,7 @@ export default function About() {
           </div>
 
           <div className="about-element fade-up lg:w-2/3 space-y-8">
-            <p className="font-inter text-lg text-grayL leading-relaxed">{siteCopy.about.bio}</p>
+            <p className="font-inter text-lg text-grayL leading-relaxed">We build AI agents for restaurants, bars and food businesses that want to automate operations without hiring more staff.</p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex items-center space-x-3">
@@ -77,7 +76,7 @@ export default function About() {
 
             <div className="flex space-x-4">
               <a
-                href={siteCopy.about.links.linkedin}
+                href="https://www.linkedin.com/company/mur-solutions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary flex items-center space-x-2"
@@ -86,7 +85,7 @@ export default function About() {
                 <span>LinkedIn</span>
               </a>
               <a
-                href={siteCopy.about.links.github}
+                href="https://github.com/mur-solutions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-accent text-accent hover:bg-accent hover:text-navy font-semibold px-6 py-3 rounded-lg transition-all duration-300 flex items-center space-x-2"
