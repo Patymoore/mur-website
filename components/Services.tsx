@@ -3,22 +3,22 @@
 import { useEffect, useRef } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Utensils, Users, Activity, LayoutDashboard, ArrowRight } from "lucide-react"
+import { BarChart3, Bot, LayoutDashboard, GitMerge, ArrowRight } from "lucide-react"
 import Container from "./Container"
 import { siteCopy } from "@/lib/constants"
 
 const serviceIcons = {
-  "F&B Intelligence": Utensils,
-  "Guest Intelligence": Users,
-  "Operations Intelligence": Activity,
-  "Command Center": LayoutDashboard,
+  "Data Intelligence": BarChart3,
+  "AI Agents": Bot,
+  "Operations Command Center": LayoutDashboard,
+  "Integrations & Pipelines": GitMerge,
 }
 
 const serviceIndustries = {
-  "F&B Intelligence": ["Restaurants", "Bars", "Multi-venue"],
-  "Guest Intelligence": ["Fine Dining", "Hospitality Groups", "Events"],
-  "Operations Intelligence": ["Multi-location", "Food Groups", "Hotels"],
-  "Command Center": ["Any F&B business", "Groups", "Operators"],
+  "Data Intelligence": ["Hospitality", "Retail", "Finance"],
+  "AI Agents": ["Any industry", "Ops-heavy businesses", "SMBs"],
+  "Operations Command Center": ["Multi-location", "F&B Groups", "E-commerce"],
+  "Integrations & Pipelines": ["Any stack", "Legacy systems", "SaaS"],
 }
 
 export default function Services() {
@@ -56,7 +56,7 @@ export default function Services() {
             What We Build
           </h2>
           <p className="font-inter text-lg text-grayL max-w-2xl mx-auto">
-            AI agents and a live Command Center — so your data finds you, instead of you hunting for it
+            AI agents, data pipelines and a Command Center — your operational data accessible, actionable and working for you
           </p>
         </div>
 
