@@ -77,7 +77,7 @@ export default function Hero() {
                 <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mr-3 group-hover:bg-accent/20 transition-colors">
                   <TrendingUp className="text-accent" size={20} />
                 </div>
-                <span className="text-2xl md:text-3xl font-bold text-white">€80K+</span>
+                <span className="text-2xl md:text-3xl font-bold text-white">€170K+</span>
               </div>
               <p className="text-grayL text-sm font-medium">Annual savings for clients</p>
             </div>
@@ -86,7 +86,7 @@ export default function Hero() {
                 <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mr-3 group-hover:bg-accent/20 transition-colors">
                   <Shield className="text-accent" size={20} />
                 </div>
-                <span className="text-2xl md:text-3xl font-bold text-white">3–5 wks</span>
+                <span className="text-2xl md:text-3xl font-bold text-white">2–4 wks</span>
               </div>
               <p className="text-grayL text-sm font-medium">Time to first live agent</p>
             </div>

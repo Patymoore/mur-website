@@ -22,7 +22,7 @@ const missionValues = [
     icon: Award,
     title: "Our Approach",
     description:
-      "We start with one concrete pain point, deploy an agent in 3–5 weeks, and prove ROI before expanding. No big-bang projects, no months of consulting before you see anything.",
+      "We start with one concrete pain point, deploy an agent in 2–4 weeks, and prove ROI before expanding. No big-bang projects, no months of consulting before you see anything.",
   },
 ]
 

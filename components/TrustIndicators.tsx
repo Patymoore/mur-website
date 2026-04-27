@@ -7,7 +7,7 @@ import Container from "./Container"
 const trustMetrics = [
   {
     icon: Zap,
-    value: "3–5 weeks",
+    value: "2–4 weeks",
     label: "Time to Live",
     description: "First agent deployed and running",
   },
