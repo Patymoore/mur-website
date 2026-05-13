@@ -31,79 +31,76 @@ export default function Hero() {
       </div>
 
       <Container className="relative z-10">
-        <div className="text-center max-w-4xl mx-auto -mt-16">
+        <div className="text-center max-w-5xl mx-auto">
 
-          {/* Logo */}
-          <div className="flex justify-center">
-            <div className="relative">
-              <Image
-                src="/logos/mur-solutions-logo.svg"
-                alt="MUR Solutions Logo"
-                width={400}
-                height={400}
-                className="drop-shadow-2xl"
-                priority
-              />
-              <div className="absolute -inset-2 bg-accent/6 rounded-full blur-lg animate-pulse opacity-40" />
-            </div>
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2 mb-8">
+            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+            <span className="text-accent text-sm font-inter font-medium tracking-wide">AI Command Center for F&B Operators</span>
           </div>
 
-          {/* Tagline */}
-          <div className="flex items-center justify-center mt-4 mb-6">
-            <h2 className="font-inter font-medium text-lg md:text-xl lg:text-2xl text-accent italic tracking-wide">
+          {/* Logo */}
+          <div className="flex justify-center mb-6">
+            <Image
+              src="/logos/mur-solutions-logo.svg"
+              alt="MUR Solutions Logo"
+              width={320}
+              height={320}
+              className="drop-shadow-2xl"
+              priority
+            />
+          </div>
+
+          {/* Headline */}
+          <h1 className="font-montserrat font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-4 leading-tight">
+            Your operation.<br />
+            <span className="text-accent">In seconds.</span>
+          </h1>
+
+          {/* Tagline typed */}
+          <div className="flex items-center justify-center mb-6">
+            <p className="font-inter font-medium text-lg md:text-xl text-grayL italic tracking-wide">
               {typedText}
-              <span className="animate-pulse">{typedText === fullText ? "" : "|"}</span>
-            </h2>
+              <span className="animate-pulse text-accent">{typedText === fullText ? "" : "|"}</span>
+            </p>
           </div>
 
           {/* Description */}
-          <p className="text-grayL text-base md:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
-            We build AI agents and data Command Centers for businesses that want their operational data accessible, actionable and working for them — in any industry.
+          <p className="text-grayL text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+            We deploy AI agents that monitor margins, waste, inventory and guest patterns 24/7 — and alert you via WhatsApp before problems hit your P&L.
           </p>
 
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto py-6">
-            <div className="text-center group">
-              <div className="flex items-center justify-center mb-2">
-                <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mr-3 group-hover:bg-accent/20 transition-colors">
-                  <Users className="text-accent" size={20} />
-                </div>
-                <span className="text-2xl md:text-3xl font-bold text-white">20+</span>
-              </div>
-              <p className="text-grayL text-sm font-medium">AI agents deployed</p>
-            </div>
-            <div className="text-center group">
-              <div className="flex items-center justify-center mb-2">
-                <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mr-3 group-hover:bg-accent/20 transition-colors">
-                  <TrendingUp className="text-accent" size={20} />
-                </div>
-                <span className="text-2xl md:text-3xl font-bold text-white">€170K+</span>
-              </div>
-              <p className="text-grayL text-sm font-medium">Annual savings for clients</p>
-            </div>
-            <div className="text-center group">
-              <div className="flex items-center justify-center mb-2">
-                <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mr-3 group-hover:bg-accent/20 transition-colors">
-                  <Shield className="text-accent" size={20} />
-                </div>
-                <span className="text-2xl md:text-3xl font-bold text-white">2–4 wks</span>
-              </div>
-              <p className="text-grayL text-sm font-medium">Time to first live agent</p>
-            </div>
-          </div>
-
           {/* CTA */}
-          <div className="pt-4 space-y-3">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
             <a
-              href="https://calendly.com/murdata/30min"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#contact"
               className="btn-primary text-base md:text-lg px-8 py-4 inline-flex items-center space-x-2 group hover:scale-105 transition-all duration-300"
             >
               <span>{siteCopy.hero.cta}</span>
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </a>
-            <p className="text-grayL text-sm opacity-80">Free 30-minute consultation • No commitment required</p>
+            <a href="#solutions" className="text-grayL hover:text-accent transition-colors text-sm flex items-center gap-2">
+              See what we build <ArrowRight size={14} />
+            </a>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-grayD/20 rounded-2xl overflow-hidden border border-grayD/20 max-w-3xl mx-auto">
+            <div className="bg-navy/80 px-8 py-6 text-center group hover:bg-navy/60 transition-colors">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-1 group-hover:text-accent transition-colors">20+</div>
+              <div className="text-accent text-xs font-medium uppercase tracking-widest mb-1">Agents Deployed</div>
+              <div className="text-grayL text-xs">across F&B operations</div>
+            </div>
+            <div className="bg-navy/80 px-8 py-6 text-center group hover:bg-navy/60 transition-colors border-x border-grayD/20">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-1 group-hover:text-accent transition-colors">€170K+</div>
+              <div className="text-accent text-xs font-medium uppercase tracking-widest mb-1">Annual Savings</div>
+              <div className="text-grayL text-xs">generated for clients</div>
+            </div>
+            <div className="bg-navy/80 px-8 py-6 text-center group hover:bg-navy/60 transition-colors">
+              <div className="text-3xl md:text-4xl font-bold text-white mb-1 group-hover:text-accent transition-colors">2–4 wks</div>
+              <div className="text-accent text-xs font-medium uppercase tracking-widest mb-1">Time to First Agent</div>
+              <div className="text-grayL text-xs">live and running</div>
+            </div>
           </div>
 
         </div>

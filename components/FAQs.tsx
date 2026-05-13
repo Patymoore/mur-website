@@ -7,62 +7,62 @@ import Container from "./Container"
 
 const faqCategories = [
   {
-    category: "Project & Timeline",
+    category: "Getting Started",
     faqs: [
       {
-        question: "What's the typical timeline for a data transformation project?",
+        question: "How fast can we go live?",
         answer:
-          "Most projects range from 10-15 weeks depending on complexity. We start with a 2-week discovery phase to provide accurate timelines. Simple dashboard implementations can be completed in 6-8 weeks, while comprehensive data platforms typically take 12-15 weeks.",
+          "First agent is live in 2–4 weeks. We start with one concrete pain point — food waste, labour cost, reservation no-shows — deploy the agent, and prove ROI before expanding. No big-bang projects, no months of consulting before you see anything.",
       },
       {
-        question: "How do you handle project scope changes?",
+        question: "Do we need to replace our POS or existing systems?",
         answer:
-          "We use an agile approach with regular check-ins. Minor adjustments are included, while significant scope changes are discussed and documented with timeline and cost implications before implementation.",
+          "No. We integrate with what you already use — Toast, Square, Lightspeed, TheFork, TripAdvisor, Google, and most major POS systems. Our job is to connect the dots between your existing tools, not to replace them.",
       },
     ],
   },
   {
-    category: "Technical & Integration",
+    category: "The Agents",
     faqs: [
       {
-        question: "Do you work with existing data infrastructure?",
+        question: "What do the AI agents actually do day-to-day?",
         answer:
-          "Absolutely. We specialize in integrating with existing systems including legacy databases, cloud platforms (AWS, Azure, GCP), and third-party APIs. Our approach minimizes disruption while maximizing the value of your current investments.",
+          "They monitor your margins, inventory, waste, guest reviews, and labour cost around the clock — without being asked. When something needs attention, an alert reaches you via WhatsApp or email, ranked by dollar impact. You get the signal, not the noise.",
       },
       {
-        question: "What technologies do you typically use?",
+        question: "Can we customise what the agents monitor and alert on?",
         answer:
-          "We use modern, proven technologies including Python, SQL, BigQuery, AWS, Kubernetes, Airflow, and various visualization tools like Data Studio and Tableau. Technology choices are always tailored to your specific needs and existing infrastructure.",
+          "Yes. Every deployment is tailored to your operation. During onboarding we define your key metrics, alert thresholds, and escalation rules. Agents learn your seasonal patterns over time and adjust their baselines automatically.",
       },
     ],
   },
   {
-    category: "Data Security & Best Practices",
+    category: "Pricing & Commitment",
     faqs: [
       {
-        question: "How do you ensure data security and privacy?",
+        question: "How does pricing work?",
         answer:
-          "We follow industry best practices including end-to-end encryption, role-based access controls, secure cloud infrastructure, and regular security audits. All data handling follows strict privacy protocols and your organization's security requirements.",
+          "Monthly subscription per venue. No long-term contracts — you can cancel any time. We start with a single venue so you can validate the ROI before rolling out to your full portfolio.",
       },
       {
-        question: "What data governance practices do you implement?",
+        question: "What's the ROI we should expect?",
         answer:
-          "We establish clear data governance frameworks including data quality standards, access controls, audit trails, and documentation. This ensures data integrity, traceability, and compliance with your internal policies and industry standards.",
+          "Our clients typically see results in 60–90 days: food waste down 15–22%, manual reporting time down 40%, and labour scheduling efficiency up 10–15%. We track these metrics together so the value is always visible.",
       },
     ],
   },
   {
-    category: "Support & Training",
+    category: "Data & Security",
     faqs: [
       {
-        question: "What kind of ongoing support do you provide?",
+        question: "Who owns the data?",
         answer:
-          "We offer flexible support packages including 24/7 monitoring, monthly optimization reviews, and priority technical support. Most clients choose our managed service option which includes proactive maintenance and continuous improvements.",
+          "You do. We act as a data processor under GDPR — your operational data belongs to your business. We never sell, share, or use your data to train models for other clients. You can export or delete everything at any time.",
       },
       {
-        question: "Can you help with team training and knowledge transfer?",
+        question: "Is the platform GDPR compliant?",
         answer:
-          "Yes, every project includes comprehensive documentation and team training. We provide hands-on workshops, video tutorials, and ongoing mentorship to ensure your team can effectively manage and extend the solutions we build.",
+          "Yes. We operate under Spanish/EU law, use EU-based infrastructure where possible, and maintain a full Data Processing Agreement with every client. Our privacy policy and terms of service are published and available on this site.",
       },
     ],
   },
@@ -111,7 +111,7 @@ export default function FAQs() {
             Frequently Asked Questions
           </h2>
           <p className="font-inter text-lg text-grayL max-w-2xl mx-auto">
-            Everything you need to know about working with us, organized by topic
+            Everything you need to know about getting AI agents running in your restaurant
           </p>
         </div>
 

@@ -53,7 +53,7 @@ export default function HowItWorks() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-20" id="how-it-works">
+    <section ref={sectionRef} className="py-20" id="process">
       <Container>
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-4">
