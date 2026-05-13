@@ -1,54 +1,38 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import Image from "next/image"
-import { ArrowRight, Users, TrendingUp, Shield } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import Container from "./Container"
 import { siteCopy } from "@/lib/constants"
 
 export default function Hero() {
-  const [typedText, setTypedText] = useState("")
-  const fullText = siteCopy.hero.tagline
-
-  useEffect(() => {
-    let i = 0
-    const timer = setInterval(() => {
-      if (i < fullText.length) {
-        setTypedText(fullText.slice(0, i + 1))
-        i++
-      } else {
-        clearInterval(timer)
-      }
-    }, 60)
-    return () => clearInterval(timer)
-  }, [fullText])
 
   return (
-    <section className="min-h-screen flex items-center justify-center pt-0 relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-navy via-[#0a1525] to-navy">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,194,255,0.08),transparent_60%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,194,255,0.04),transparent_60%)]" />
       </div>
 
       <Container className="relative z-10">
-        <div className="text-center max-w-5xl mx-auto">
-
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2 mb-8">
-            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            <span className="text-accent text-sm font-inter font-medium tracking-wide">AI Command Center for F&B Operators</span>
-          </div>
+        <div className="text-center max-w-5xl mx-auto py-12">
 
           {/* Logo */}
           <div className="flex justify-center mb-6">
             <Image
               src="/logos/mur-solutions-logo.svg"
               alt="MUR Solutions Logo"
-              width={320}
-              height={320}
+              width={280}
+              height={280}
               className="drop-shadow-2xl"
               priority
             />
+          </div>
+
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 py-2 mb-6">
+            <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+            <span className="text-accent text-sm font-inter font-medium tracking-wide">AI Command Center for F&B Operators</span>
           </div>
 
           {/* Headline */}
@@ -56,14 +40,6 @@ export default function Hero() {
             Your operation.<br />
             <span className="text-accent">In seconds.</span>
           </h1>
-
-          {/* Tagline typed */}
-          <div className="flex items-center justify-center mb-6">
-            <p className="font-inter font-medium text-lg md:text-xl text-grayL italic tracking-wide">
-              {typedText}
-              <span className="animate-pulse text-accent">{typedText === fullText ? "" : "|"}</span>
-            </p>
-          </div>
 
           {/* Description */}
           <p className="text-grayL text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
