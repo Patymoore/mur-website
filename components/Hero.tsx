@@ -49,8 +49,8 @@ export default function Hero() {
             {/* Headline immediately after logo */}
             <div className="space-y-1">
               <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-white leading-[1.1]">
-                Enterprise-Grade
-                <span className="block text-accent font-extrabold">Data Solutions</span>
+                Your data already knows what to fix.
+                <span className="block text-accent font-extrabold">We make it talk.</span>
               </h1>
               <p className="text-xl md:text-2xl text-accent font-medium italic tracking-wide">
                 {siteCopy.hero.tagline}
@@ -62,8 +62,8 @@ export default function Hero() {
           <div className="space-y-6 w-full mt-6">
             {/* Description */}
             <p className="text-lg md:text-xl text-grayL leading-relaxed max-w-3xl mx-auto">
-              Transform your business with AI-powered analytics, cloud infrastructure, and predictive insights. 
-              <span className="text-white font-medium"> Trusted by Fortune 500 companies.</span>
+              We build the dashboards, pipelines and AI models that turn scattered business data into a clear next move —
+              <span className="text-white font-medium"> usually in weeks, not quarters.</span>
             </p>
 
             {/* Enhanced CTA Section */}
@@ -93,13 +93,12 @@ export default function Hero() {
                   View Case Studies
                 </button>
               </div>
-              <p className="text-grayL text-sm opacity-90">
+              <p className="text-grayL text-sm opacity-90 max-w-2xl mx-auto">
                 <span className="inline-flex items-center space-x-1">
                   <Zap size={14} className="text-accent" />
-                  <span>Free 30-minute consultation</span>
-                </span>
-                <span className="mx-2">•</span>
-                <span>No commitment required</span>
+                  <span className="text-white font-medium">Start with a free data audit.</span>
+                </span>{" "}
+                30 minutes, no slides — we name the 3 highest-leverage fixes, whether you hire us or not.
               </p>
             </div>
           </div>

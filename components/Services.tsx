@@ -8,17 +8,17 @@ import Container from "./Container"
 import { siteCopy } from "@/lib/constants"
 
 const serviceIcons = {
-  "Insight 360°": BarChart3,
-  "Cloud Data Backbone": Cloud,
-  "Predictive Insights Kit": Brain,
-  "AI Chatbot Suite": MessageSquare,
+  "Dashboards & KPIs": BarChart3,
+  "Data pipelines & cloud": Cloud,
+  "Forecasting & ML": Brain,
+  "Custom AI assistants": MessageSquare,
 }
 
 const serviceIndustries = {
-  "Insight 360°": ["E-commerce", "Retail", "SaaS"],
-  "Cloud Data Backbone": ["Fintech", "Healthcare", "Manufacturing"],
-  "Predictive Insights Kit": ["E-commerce", "Supply Chain", "Finance"],
-  "AI Chatbot Suite": ["Customer Service", "E-commerce", "SaaS"],
+  "Dashboards & KPIs": ["E-commerce", "Retail", "SaaS"],
+  "Data pipelines & cloud": ["Fintech", "Healthcare", "Manufacturing"],
+  "Forecasting & ML": ["E-commerce", "Supply Chain", "Finance"],
+  "Custom AI assistants": ["Customer Service", "E-commerce", "SaaS"],
 }
 
 export default function Services() {
@@ -76,6 +76,9 @@ export default function Services() {
                   </div>
                   <CardTitle className="font-montserrat font-semibold text-white group-hover:text-accent transition-colors">
                     {service.name}
+                    {service.brand && (
+                      <span className="block text-xs font-normal text-grayL/70 mt-1">{service.brand}</span>
+                    )}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">

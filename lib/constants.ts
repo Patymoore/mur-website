@@ -9,25 +9,29 @@ export const colors = {
 export const siteCopy = {
   hero: {
     headline: "MUR SOLUTIONS",
-    tagline: "From data to impact",
+    tagline: "AI & data consulting — from raw operations to decisions that pay for themselves",
     cta: "Book a discovery call",
   },
   services: [
     {
-      name: "Insight 360°",
-      desc: "Interactive dashboards, automated KPIs & alerts for faster, data-driven decisions.",
+      name: "Dashboards & KPIs",
+      brand: "Insight 360°",
+      desc: "See your business in real time — automated metrics, alerts and one source of truth.",
     },
     {
-      name: "Cloud Data Backbone",
-      desc: "End-to-end pipelines, cloud ingestion & orchestration—your future-proof architecture.",
+      name: "Data pipelines & cloud",
+      brand: "Data Backbone",
+      desc: "Ingest, clean and orchestrate all your data on future-proof cloud infrastructure.",
     },
     {
-      name: "Predictive Insights Kit",
-      desc: "ML models for demand, risk and churn: actionable foresight, competitive edge.",
+      name: "Forecasting & ML",
+      brand: "Predictive Kit",
+      desc: "Predict demand, churn and risk before they hit the P&L.",
     },
     {
-      name: "AI Chatbot Suite",
-      desc: "Custom chatbots trained on your data—24/7 support, lower operational load.",
+      name: "Custom AI assistants",
+      brand: "AI Suite",
+      desc: "Assistants trained on your data — 24/7 support, less manual load.",
     },
   ],
   success: [
