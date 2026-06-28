@@ -25,7 +25,7 @@ export default function Footer() {
             >
               <Github size={20} />
             </a>
-            <a href="mailto:patricio@murdatasolutions.com" className="text-grayL hover:text-accent transition-colors">
+            <a href="mailto:patricio@mur-solutions.com" className="text-grayL hover:text-accent transition-colors">
               <Mail size={20} />
             </a>
           </div>

@@ -14,8 +14,8 @@ export async function POST(request: NextRequest) {
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
-      from: "MUR Data Solutions <noreply@murdatasolutions.com>",
-      to: ["patricio@murdatasolutions.com"],
+      from: "MUR Solutions <noreply@mur-solutions.com>",
+      to: ["patricio@mur-solutions.com"],
       subject: `New Contact Form Message from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

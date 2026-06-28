@@ -168,11 +168,11 @@ export default function ContactUs() {
                 <h3 className="font-montserrat font-semibold text-white text-lg mb-4">Get in Touch</h3>
                 <div className="space-y-3">
                   <a
-                    href="mailto:patricio@murdatasolutions.com"
+                    href="mailto:patricio@mur-solutions.com"
                     className="flex items-center space-x-3 text-grayL hover:text-accent transition-colors"
                   >
                     <Mail size={18} />
-                    <span className="text-sm">patricio@murdatasolutions.com</span>
+                    <span className="text-sm">patricio@mur-solutions.com</span>
                   </a>
                   <a
                     href="tel:+1234567890"
