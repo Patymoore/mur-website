@@ -19,7 +19,7 @@ const sections = [
 - Registered address: Torrent de l'Olla 121, 08012 Barcelona, Spain
 - Contact: legal@mur-solutions.com
 
-This service is intended exclusively for business operators aged 18 or over. MUR Solutions does not knowingly collect data from minors.`,
+This service is intended exclusively for business clients aged 18 or over. MUR Solutions does not knowingly collect data from minors.`,
   },
   {
     id: "data",
@@ -31,10 +31,10 @@ This service is intended exclusively for business operators aged 18 or over. MUR
 - Email address
 - Password (encrypted and managed by Clerk)
 
-**Restaurant operational data:**
-- Sales figures (tickets, revenue, billing)
-- Operational and business performance metrics
-- Venue name and location
+**Client project data:**
+- Business datasets provided for analysis and consulting
+- Operational and performance metrics relevant to engagements
+- Company name and contact details
 
 **App usage data:**
 - Pages visited and features used
@@ -45,7 +45,7 @@ This service is intended exclusively for business operators aged 18 or over. MUR
     id: "purpose",
     title: "3. Purpose & Legal Basis",
     table: [
-      ["Delivery of the contracted SaaS service", "Performance of a contract (Art. 6.1.b GDPR)"],
+      ["Delivery of the contracted consulting services", "Performance of a contract (Art. 6.1.b GDPR)"],
       ["Account management and authentication", "Performance of a contract (Art. 6.1.b GDPR)"],
       ["Usage analytics to improve the product", "Legitimate interest (Art. 6.1.f GDPR)"],
       ["Service communications", "Performance of a contract (Art. 6.1.b GDPR)"],
@@ -80,7 +80,7 @@ To request details of the specific safeguards in place, email legal@mur-solution
     title: "6. Data Retention",
     content: `We retain your data for as long as your account is active. After subscription cancellation:
 
-- Restaurant operational data is kept for **30 days** to allow export.
+- Client project data is kept for **30 days** to allow export.
 - After that period, it is permanently deleted from our systems.
 - Billing records are retained for **5 years** in accordance with Spanish tax law.`,
   },

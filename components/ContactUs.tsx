@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Linkedin, Github, Mail, Send, Calendar, MapPin, Clock, Users, MessageCircle } from "lucide-react"
+import { Linkedin, Github, Mail, Send, Calendar, MapPin, Phone, Clock, Users, MessageCircle } from "lucide-react"
 import Container from "./Container"
 import { siteCopy } from "@/lib/constants"
 
@@ -53,7 +53,7 @@ export default function ContactUs() {
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-4">Contact Us</h2>
           <p className="font-inter text-lg text-grayL max-w-2xl mx-auto">
-            Book a free 30-minute call. We&apos;ll identify one concrete pain point and show you what an agent would do about it.
+            Ready to transform your data into actionable insights? Let&apos;s discuss your project.
           </p>
         </div>
 
@@ -173,6 +173,13 @@ export default function ContactUs() {
                   >
                     <Mail size={18} />
                     <span className="text-sm">patricio@murdatasolutions.com</span>
+                  </a>
+                  <a
+                    href="tel:+1234567890"
+                    className="flex items-center space-x-3 text-grayL hover:text-accent transition-colors"
+                  >
+                    <Phone size={18} />
+                    <span className="text-sm">+1 (234) 567-8900</span>
                   </a>
                   <div className="flex items-center space-x-3 text-grayL">
                     <MapPin size={18} />

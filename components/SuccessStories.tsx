@@ -2,12 +2,8 @@
 
 import { useEffect, useRef } from "react"
 import { Card, CardContent } from "@/components/ui/card"
-import { TrendingDown, ShieldCheck, Clock, DollarSign } from "lucide-react"
 import Container from "./Container"
 import { siteCopy } from "@/lib/constants"
-
-const impactIcons = [TrendingDown, ShieldCheck, Clock, DollarSign]
-const impactIndustry = ["Food & Beverage", "Finance / Ops", "Multi-location", "Operations"]
 
 export default function SuccessStories() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -49,40 +45,34 @@ export default function SuccessStories() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {siteCopy.success.map((impact, index) => {
-            const Icon = impactIcons[index]
-            return (
-              <Card
-                key={index}
-                className="impact-card fade-up bg-accent/10 border-accent/30 hover:bg-accent/20 transition-all duration-300 group"
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
-                      <Icon className="text-accent" size={20} />
-                    </div>
-                    <span className="text-accent text-xs font-medium uppercase tracking-widest">{impactIndustry[index]}</span>
-                  </div>
-                  <p className="font-inter font-medium text-white text-sm leading-relaxed">{impact}</p>
-                </CardContent>
-              </Card>
-            )
-          })}
+          {siteCopy.success.map((impact, index) => (
+            <Card
+              key={index}
+              className="impact-card fade-up bg-accent/10 border-accent/30 hover:bg-accent/20 transition-all duration-300 group"
+            >
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 mx-auto mb-4 bg-accent/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <span className="text-accent font-bold text-lg">{index + 1}</span>
+                </div>
+                <p className="font-inter font-medium text-white text-lg leading-relaxed">{impact}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* Key Metrics */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="text-center">
-            <div className="text-4xl font-bold text-accent mb-2">€170K+</div>
-            <p className="text-grayL">Annual savings generated for clients</p>
+            <div className="text-4xl font-bold text-accent mb-2">$2M+</div>
+            <p className="text-grayL">Total savings generated</p>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-accent mb-2">20+</div>
-            <p className="text-grayL">AI agents deployed</p>
+            <div className="text-4xl font-bold text-accent mb-2">50+</div>
+            <p className="text-grayL">Projects completed</p>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-accent mb-2">2–4 wks</div>
-            <p className="text-grayL">Average time to first live agent</p>
+            <div className="text-4xl font-bold text-accent mb-2">99.2%</div>
+            <p className="text-grayL">Client satisfaction rate</p>
           </div>
         </div>
       </Container>

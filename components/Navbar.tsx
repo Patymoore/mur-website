@@ -95,12 +95,6 @@ export default function Navbar() {
                 {item.name}
               </button>
             ))}
-            <button
-              onClick={() => scrollToSection("#contact")}
-              className="btn-primary text-sm px-5 py-2"
-            >
-              Book a Call
-            </button>
           </div>
 
           {/* Mobile Menu Button */}

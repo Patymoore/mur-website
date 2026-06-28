@@ -3,22 +3,22 @@
 import { useEffect, useRef } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { BarChart3, Bot, LayoutDashboard, GitMerge, ArrowRight } from "lucide-react"
+import { BarChart3, Cloud, Brain, MessageSquare, ArrowRight } from "lucide-react"
 import Container from "./Container"
 import { siteCopy } from "@/lib/constants"
 
 const serviceIcons = {
-  "Data Intelligence": BarChart3,
-  "AI Agents": Bot,
-  "Operations Command Center": LayoutDashboard,
-  "Integrations & Pipelines": GitMerge,
+  "Insight 360°": BarChart3,
+  "Cloud Data Backbone": Cloud,
+  "Predictive Insights Kit": Brain,
+  "AI Chatbot Suite": MessageSquare,
 }
 
 const serviceIndustries = {
-  "Data Intelligence": ["Hospitality", "Retail", "Finance"],
-  "AI Agents": ["Any industry", "Ops-heavy businesses", "SMBs"],
-  "Operations Command Center": ["Multi-location", "F&B Groups", "E-commerce"],
-  "Integrations & Pipelines": ["Any stack", "Legacy systems", "SaaS"],
+  "Insight 360°": ["E-commerce", "Retail", "SaaS"],
+  "Cloud Data Backbone": ["Fintech", "Healthcare", "Manufacturing"],
+  "Predictive Insights Kit": ["E-commerce", "Supply Chain", "Finance"],
+  "AI Chatbot Suite": ["Customer Service", "E-commerce", "SaaS"],
 }
 
 export default function Services() {
@@ -53,10 +53,10 @@ export default function Services() {
       <Container>
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-4">
-            What We Build
+            Specialized Services
           </h2>
           <p className="font-inter text-lg text-grayL max-w-2xl mx-auto">
-            AI agents, data pipelines and a Command Center — your operational data accessible, actionable and working for you
+            End-to-end data solutions designed to transform your business
           </p>
         </div>
 
