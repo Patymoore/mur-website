@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Linkedin, Github, Mail, Send, Calendar, MapPin, Phone, Clock, Users, MessageCircle } from "lucide-react"
+import { Linkedin, Github, Mail, Send, Calendar, MapPin, Clock, Users, MessageCircle } from "lucide-react"
 import Container from "./Container"
 import { siteCopy } from "@/lib/constants"
 
@@ -173,13 +173,6 @@ export default function ContactUs() {
                   >
                     <Mail size={18} />
                     <span className="text-sm">patricio@mur-solutions.com</span>
-                  </a>
-                  <a
-                    href="tel:+1234567890"
-                    className="flex items-center space-x-3 text-grayL hover:text-accent transition-colors"
-                  >
-                    <Phone size={18} />
-                    <span className="text-sm">+1 (234) 567-8900</span>
                   </a>
                   <div className="flex items-center space-x-3 text-grayL">
                     <MapPin size={18} />
