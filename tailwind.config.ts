@@ -56,6 +56,7 @@ const config: Config = {
       fontFamily: {
         montserrat: ["var(--font-montserrat)", "sans-serif"],
         inter: ["var(--font-inter)", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       borderRadius: {
         lg: "var(--radius)",

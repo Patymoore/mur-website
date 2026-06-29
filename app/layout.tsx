@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Montserrat, Inter } from "next/font/google"
+import { Montserrat, Inter, JetBrains_Mono } from "next/font/google"
 import "./globals.css"
 
 const montserrat = Montserrat({
@@ -15,13 +15,20 @@ const inter = Inter({
   variable: "--font-inter",
 })
 
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-mono",
+})
+
 export const metadata: Metadata = {
-  title: "MUR SOLUTIONS - From Data to Impact",
+  title: "MUR Solutions — An AI company that ships",
   description:
-    "Transform your business with data-driven insights, cloud infrastructure, and AI solutions. Expert data science consulting for Fortune 500 and SMEs.",
+    "MUR Solutions is an AI company that builds the agents, models and software that read your operations and act on them — shipped to production, not slideware. The studio behind Sophios and Kairos.",
   openGraph: {
-    title: "MUR SOLUTIONS - From Data to Impact",
-    description: "Transform your business with data-driven insights, cloud infrastructure, and AI solutions.",
+    title: "MUR Solutions — An AI company that ships",
+    description:
+      "We build the AI agents, models and software that read your operations and act on them — shipped as real products.",
     type: "website",
   },
   // Favicon y iconos
@@ -33,7 +40,6 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -42,8 +48,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`scroll-smooth bg-navy text-white ${montserrat.variable} ${inter.variable}`}>
-      <body className="min-h-screen bg-gradient-to-b from-navy via-[#06101E] to-navy">{children}</body>
+    <html
+      lang="en"
+      className={`scroll-smooth bg-navy text-white ${montserrat.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+    >
+      <body className="min-h-screen bg-navy">{children}</body>
     </html>
   )
 }
