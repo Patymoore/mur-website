@@ -9,8 +9,8 @@ const navItems = [
   { name: "Solutions", href: "#solutions" },
   { name: "About Us", href: "#about" },
   { name: "Our Products", href: "#products" },
-  { name: "Success Stories", href: "#success-stories" },
-  { name: "About the Process", href: "#process" },
+  { name: "Client Work", href: "#success-stories" },
+  { name: "How We Work", href: "#process" },
   { name: "FAQs", href: "#faqs" },
   { name: "Contact Us", href: "#contact" },
 ]

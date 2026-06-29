@@ -7,17 +7,22 @@ import Container from "./Container"
 
 const faqCategories = [
   {
-    category: "Project & Timeline",
+    category: "Working with us",
     faqs: [
       {
-        question: "What's the typical timeline for a data transformation project?",
+        question: "How fast do we see something real?",
         answer:
-          "Most projects range from 10-15 weeks depending on complexity. We start with a 2-week discovery phase to provide accurate timelines. Simple dashboard implementations can be completed in 6-8 weeks, while comprehensive data platforms typically take 12-15 weeks.",
+          "We prototype on your real data first. The goal is a working AI prototype you can judge early — not a months-long roadmap before anything runs. Once it proves out, we move into a full production build.",
       },
       {
-        question: "How do you handle project scope changes?",
+        question: "Do you only build with AI, or also plain software?",
         answer:
-          "We use an agile approach with regular check-ins. Minor adjustments are included, while significant scope changes are discussed and documented with timeline and cost implications before implementation.",
+          "We're an AI company, but the AI is only useful wrapped in real software — pipelines, integrations, UI, monitoring. We build the whole thing end-to-end and ship it to production, the same way we run our own products.",
+      },
+      {
+        question: "What if AI isn't the right answer for our problem?",
+        answer:
+          "Then we'll tell you. The prototype step exists to kill bad ideas cheaply. If a simpler system beats a model, we build that instead — we'd rather keep the relationship than oversell a model.",
       },
     ],
   },
@@ -25,44 +30,44 @@ const faqCategories = [
     category: "Technical & Integration",
     faqs: [
       {
-        question: "Do you work with existing data infrastructure?",
+        question: "Do you work with our existing systems?",
         answer:
-          "Absolutely. We specialize in integrating with existing systems including legacy databases, cloud platforms (AWS, Azure, GCP), and third-party APIs. Our approach minimizes disruption while maximizing the value of your current investments.",
+          "Yes. We integrate with your existing databases, cloud platforms (AWS, Azure, GCP), POS and third-party APIs. We add AI on top of what you already run — no rip-and-replace required.",
       },
       {
-        question: "What technologies do you typically use?",
+        question: "What does your AI stack look like?",
         answer:
-          "We use modern, proven technologies including Python, SQL, BigQuery, AWS, Kubernetes, Airflow, and various visualization tools like Data Studio and Tableau. Technology choices are always tailored to your specific needs and existing infrastructure.",
-      },
-    ],
-  },
-  {
-    category: "Data Security & Best Practices",
-    faqs: [
-      {
-        question: "How do you ensure data security and privacy?",
-        answer:
-          "We follow industry best practices including end-to-end encryption, role-based access controls, secure cloud infrastructure, and regular security audits. All data handling follows strict privacy protocols and your organization's security requirements.",
-      },
-      {
-        question: "What data governance practices do you implement?",
-        answer:
-          "We establish clear data governance frameworks including data quality standards, access controls, audit trails, and documentation. This ensures data integrity, traceability, and compliance with your internal policies and industry standards.",
+          "AI agents and LLMs (including private, self-hosted models), retrieval and orchestration, plus Python, SQL, BigQuery, AWS and Airflow underneath. We pick the model and architecture per use case — accuracy and cost, not hype.",
       },
     ],
   },
   {
-    category: "Support & Training",
+    category: "Privacy & AI safety",
     faqs: [
       {
-        question: "What kind of ongoing support do you provide?",
+        question: "Does our data train someone else's model?",
         answer:
-          "We offer flexible support packages including 24/7 monitoring, monthly optimization reviews, and priority technical support. Most clients choose our managed service option which includes proactive maintenance and continuous improvements.",
+          "No. We default to private AI infrastructure — your data stays under your control and is never used to train third-party models. Where it fits, we run models you own. We act as a data processor under GDPR, with a DPA in place.",
       },
       {
-        question: "Can you help with team training and knowledge transfer?",
+        question: "How do you keep an AI system honest in production?",
         answer:
-          "Yes, every project includes comprehensive documentation and team training. We provide hands-on workshops, video tutorials, and ongoing mentorship to ensure your team can effectively manage and extend the solutions we build.",
+          "We instrument accuracy, cost and drift, add guardrails around model outputs, and keep humans in the loop where the stakes are high. As your data and business change, we re-tune the models rather than letting them quietly degrade.",
+      },
+    ],
+  },
+  {
+    category: "Support & handover",
+    faqs: [
+      {
+        question: "What happens after launch?",
+        answer:
+          "We keep the system running and improving — monitoring quality, tuning models, and giving you a direct line to the senior engineers who built it. No tier-1 ticket queue.",
+      },
+      {
+        question: "Can our team own it eventually?",
+        answer:
+          "Yes. Every build ships with documentation and knowledge transfer so your team can operate and extend it. You own the deliverables; we stay as deep as you want us to.",
       },
     ],
   },

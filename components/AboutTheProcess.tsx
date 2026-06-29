@@ -7,35 +7,39 @@ import Container from "./Container"
 
 const processSteps = [
   {
-    phase: "Discovery",
-    duration: "Week 1-2",
-    title: "Data Audit & Strategy",
-    description: "Comprehensive analysis of your current data infrastructure, pain points, and business objectives.",
-    deliverables: ["Data maturity assessment", "Gap analysis report", "Strategic roadmap"],
+    phase: "Step 1",
+    duration: "Audit",
+    title: "Find the highest-leverage problem",
+    description:
+      "We map your data and operations, then pick the one place where AI pays for itself fastest. No boil-the-ocean roadmaps.",
+    deliverables: ["Data & ops review", "Use-case shortlist", "Clear success metric"],
     icon: Search,
   },
   {
-    phase: "Design",
-    duration: "Week 3-5",
-    title: "Architecture & Prototyping",
-    description: "Custom solution design with scalable architecture and proof-of-concept development.",
-    deliverables: ["Technical specifications", "System architecture", "Interactive prototype"],
+    phase: "Step 2",
+    duration: "Prototype",
+    title: "Working AI, not slides",
+    description:
+      "We build a private AI prototype against your real data — so you see it work on your problem before committing to a full build.",
+    deliverables: ["Private AI prototype", "Accuracy & cost check", "Go / no-go decision"],
     icon: Lightbulb,
   },
   {
-    phase: "Development",
-    duration: "Week 6-12",
-    title: "Implementation & Integration",
-    description: "Agile development with continuous testing and seamless integration with existing systems.",
-    deliverables: ["Core system build", "API integrations", "Quality assurance testing"],
+    phase: "Step 3",
+    duration: "Build",
+    title: "Ship it into production",
+    description:
+      "We turn the prototype into real software — agents, pipelines and UI — integrated with your systems and running in production.",
+    deliverables: ["Production AI system", "Integrations & pipelines", "Monitoring & guardrails"],
     icon: Code,
   },
   {
-    phase: "Deployment",
-    duration: "Week 13-15",
-    title: "Launch & Optimization",
-    description: "Smooth production deployment with performance monitoring and initial optimizations.",
-    deliverables: ["Production deployment", "Performance monitoring", "Team training"],
+    phase: "Step 4",
+    duration: "Run",
+    title: "Improve while it runs",
+    description:
+      "We keep the system honest — tracking accuracy, cost and drift — and improve the models as your data and business change.",
+    deliverables: ["Ongoing tuning", "Drift & quality monitoring", "Senior support"],
     icon: Rocket,
   },
 ]
@@ -72,10 +76,10 @@ export default function AboutTheProcess() {
       <Container>
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-4">
-            About the Process
+            How we work
           </h2>
           <p className="font-inter text-lg text-grayL max-w-2xl mx-auto">
-            Our proven 15-week methodology refined through 50+ successful implementations
+            The same path we use to ship our own AI products — prototype on real data first, build only what works
           </p>
         </div>
 
@@ -123,7 +127,7 @@ export default function AboutTheProcess() {
             <span className="font-medium">Ready to get started?</span>
             <ArrowRight size={16} />
           </div>
-          <p className="text-grayL text-sm">Most projects see initial results within 45 days</p>
+          <p className="text-grayL text-sm">It starts with a free data audit — no commitment, no slides</p>
         </div>
       </Container>
     </section>
