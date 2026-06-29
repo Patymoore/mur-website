@@ -212,22 +212,6 @@ export default function CaseStudyShowcase() {
               </div>
             </CardContent>
           </Card>
-
-          {/* Summary Metrics */}
-          <div className="case-element fade-up mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-accent mb-2">$2M+</div>
-              <p className="text-grayL">Total savings generated</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-accent mb-2">50+</div>
-              <p className="text-grayL">Projects completed</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-accent mb-2">99.2%</div>
-              <p className="text-grayL">Client satisfaction rate</p>
-            </div>
-          </div>
         </div>
       </Container>
     </section>
