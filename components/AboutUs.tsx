@@ -10,19 +10,19 @@ const missionValues = [
     icon: Target,
     title: "Our Mission",
     description:
-      "Transform businesses through data-driven insights, making complex analytics accessible and actionable for every organization.",
+      "Put real AI to work inside businesses — software that reads the data, makes the call and ships to production, not another report.",
   },
   {
     icon: Users,
     title: "Our Values",
     description:
-      "Transparency, innovation, and client success drive everything we do. We believe in building long-term partnerships, not just projects.",
+      "Private AI by default, honest about what models can and can't do, and long-term partnerships over one-off projects.",
   },
   {
     icon: Award,
     title: "Our Approach",
     description:
-      "Hands-on collaboration with Fortune 500 and SMEs alike, delivering measurable results through proven methodologies and cutting-edge technology.",
+      "We're a small senior team that builds and runs its own AI products — so we build yours the same way, hands-on and end-to-end.",
   },
 ]
 
@@ -59,7 +59,7 @@ export default function AboutUs() {
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-4">About Us</h2>
           <p className="font-inter text-lg text-grayL max-w-2xl mx-auto">
-            Transforming data into business impact through expertise, innovation, and proven results
+            An AI company that builds software around its models — and runs it in production
           </p>
         </div>
 

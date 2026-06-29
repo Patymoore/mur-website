@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar"
 import SolutionsSection from "@/components/SolutionsSection"
+import AIShowcase from "@/components/AIShowcase"
 import AboutUs from "@/components/AboutUs"
 import OurProducts from "@/components/OurProducts"
 import CaseStudyShowcase from "@/components/CaseStudyShowcase"
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <main>
         <SolutionsSection />
+        <AIShowcase />
         <AboutUs />
         <OurProducts />
         <CaseStudyShowcase />

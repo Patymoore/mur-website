@@ -16,7 +16,7 @@ const products = [
       "Unified financial and operational management across yachts, jets, properties and vehicles — with private AI infrastructure so data never leaves the client's control.",
     audience: "Family offices & high-net-worth operators",
     highlights: [
-      "95%+ accuracy on AI invoice & expense extraction",
+      "Private AI for invoice & expense extraction",
       "Operational in 48 hours",
       "Crew, payroll, approvals & predictive maintenance",
     ],
@@ -88,8 +88,8 @@ export default function OurProducts() {
             <p className="text-grayL">AI products in production</p>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-accent mb-2">95%+</div>
-            <p className="text-grayL">AI extraction accuracy</p>
+            <div className="text-4xl font-bold text-accent mb-2">Private</div>
+            <p className="text-grayL">AI infrastructure — your data stays yours</p>
           </div>
           <div className="text-center">
             <div className="text-4xl font-bold text-accent mb-2">48h</div>

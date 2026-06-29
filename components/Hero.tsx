@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import { ArrowRight, Users, TrendingUp, Shield, BarChart3, Database, Zap } from "lucide-react"
+import { ArrowRight, TrendingUp, Shield, Brain, Database, Zap } from "lucide-react"
 import Container from "./Container"
 import { siteCopy } from "@/lib/constants"
 
@@ -62,8 +62,8 @@ export default function Hero() {
           <div className="space-y-6 w-full mt-6">
             {/* Description */}
             <p className="text-lg md:text-xl text-grayL leading-relaxed max-w-3xl mx-auto">
-              We build the dashboards, pipelines and AI models that turn scattered business data into a clear next move —
-              <span className="text-white font-medium"> usually in weeks, not quarters.</span>
+              We&apos;re an AI company. We build the agents, models and software that read your operations and act on them —
+              <span className="text-white font-medium"> shipped as real products, not slide decks.</span>
             </p>
 
             {/* Enhanced CTA Section */}
@@ -107,29 +107,17 @@ export default function Hero() {
           <div className="w-full max-w-2xl">
             <div className="glass-card rounded-2xl p-8 shadow-xl hero-glow">
               <h3 className="text-accent font-semibold text-sm uppercase tracking-wider mb-8 text-center">
-                Proven Impact
+                What we&apos;ve shipped
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="group cursor-pointer">
                   <div className="flex flex-col items-center space-y-3 p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300 border border-accent/10 hover:border-accent/30">
                     <div className="w-16 h-16 bg-accent/15 rounded-xl flex items-center justify-center group-hover:bg-accent/25 transition-colors">
-                      <Users className="text-accent" size={28} />
+                      <Zap className="text-accent" size={28} />
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-white">50+</div>
-                      <div className="text-grayL text-sm font-medium">Projects Delivered</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="group cursor-pointer">
-                  <div className="flex flex-col items-center space-y-3 p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300 border border-accent/10 hover:border-accent/30">
-                    <div className="w-16 h-16 bg-accent/15 rounded-xl flex items-center justify-center group-hover:bg-accent/25 transition-colors">
-                      <TrendingUp className="text-accent" size={28} />
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold text-white">$2M+</div>
-                      <div className="text-grayL text-sm font-medium">Cost Savings</div>
+                      <div className="text-3xl font-bold text-white">2</div>
+                      <div className="text-grayL text-sm font-medium">AI products in production</div>
                     </div>
                   </div>
                 </div>
@@ -140,8 +128,20 @@ export default function Hero() {
                       <Shield className="text-accent" size={28} />
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-white">10+</div>
-                      <div className="text-grayL text-sm font-medium">Years Experience</div>
+                      <div className="text-3xl font-bold text-white">Private</div>
+                      <div className="text-grayL text-sm font-medium">AI — your data stays yours</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="group cursor-pointer">
+                  <div className="flex flex-col items-center space-y-3 p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300 border border-accent/10 hover:border-accent/30">
+                    <div className="w-16 h-16 bg-accent/15 rounded-xl flex items-center justify-center group-hover:bg-accent/25 transition-colors">
+                      <TrendingUp className="text-accent" size={28} />
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-white">48h</div>
+                      <div className="text-grayL text-sm font-medium">From kickoff to live</div>
                     </div>
                   </div>
                 </div>
@@ -153,16 +153,16 @@ export default function Hero() {
           <div className="w-full max-w-xl">
             <div className="glass-card rounded-2xl p-8 shadow-xl hero-glow">
               <h3 className="text-accent font-semibold text-sm uppercase tracking-wider mb-6 text-center">
-                Enterprise Technologies
+                Our AI stack
               </h3>
               <div className="grid grid-cols-3 gap-6">
                 <div className="flex flex-col items-center space-y-3 p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 group">
-                  <Database className="text-accent group-hover:scale-110 transition-transform" size={32} />
-                  <span className="text-grayL text-sm font-medium">Cloud Data</span>
+                  <Brain className="text-accent group-hover:scale-110 transition-transform" size={32} />
+                  <span className="text-grayL text-sm font-medium">AI agents</span>
                 </div>
                 <div className="flex flex-col items-center space-y-3 p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 group">
-                  <BarChart3 className="text-accent group-hover:scale-110 transition-transform" size={32} />
-                  <span className="text-grayL text-sm font-medium">AI Analytics</span>
+                  <Database className="text-accent group-hover:scale-110 transition-transform" size={32} />
+                  <span className="text-grayL text-sm font-medium">Private LLMs</span>
                 </div>
                 <div className="flex flex-col items-center space-y-3 p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 group">
                   <Zap className="text-accent group-hover:scale-110 transition-transform" size={32} />

@@ -9,7 +9,7 @@ export const colors = {
 export const siteCopy = {
   hero: {
     headline: "MUR SOLUTIONS",
-    tagline: "AI & data consulting — from raw operations to decisions that pay for themselves",
+    tagline: "An AI company — we build the software, the agents and the data underneath",
     cta: "Book a discovery call",
   },
   services: [

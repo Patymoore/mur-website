@@ -53,10 +53,10 @@ export default function Services() {
       <Container>
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-4">
-            Specialized Services
+            What we build
           </h2>
           <p className="font-inter text-lg text-grayL max-w-2xl mx-auto">
-            End-to-end data solutions designed to transform your business
+            AI-powered software and data systems, built end-to-end and shipped into production
           </p>
         </div>
 

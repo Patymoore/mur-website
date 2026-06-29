@@ -8,47 +8,45 @@ import Container from "./Container"
 
 const caseStudies = [
   {
-    industry: "E-commerce",
-    company: "Global Retail Chain",
+    industry: "Global e-commerce",
+    company: "Global e-commerce marketplace",
     challenge:
-      "Invoice, receipt and transaction duplicates and missing entries in accounting system causing losses and imbalances",
-    solution: "End-to-end dashboards with alerts to track complete order lifecycle from generation to accounting",
+      "Invoice, receipt and transaction duplicates and missing entries across the accounting system were causing silent revenue leakage.",
+    solution:
+      "AI-driven reconciliation over the full order lifecycle — automatically flagging duplicates and gaps before they hit the ledger.",
     results: [
       { icon: DollarSign, metric: "$1.3M/mo", label: "Revenue Protected", color: "text-green-400" },
       { icon: TrendingUp, metric: "15%", label: "Error Reduction", color: "text-blue-400" },
       { icon: Clock, metric: "24/7", label: "Automated Monitoring", color: "text-purple-400" },
     ],
-    technologies: ["Python", "BigQuery", "SQL", "Data Studio"],
-    timeline: "12 weeks",
-    testimonial: "The end-to-end visibility eliminated our accounting discrepancies completely.",
+    technologies: ["Python", "BigQuery", "SQL", "ML reconciliation"],
   },
   {
-    industry: "E-commerce",
-    company: "E-commerce Retailer",
-    challenge: "Stores lacking real-time inventory visibility causing stockouts and delivery delays",
-    solution: "Real-time inventory dashboards and automated alerts for store stock management",
+    industry: "Electronics retail",
+    company: "Electronics retail chain",
+    challenge:
+      "Stores lacked real-time inventory visibility, driving stockouts and delivery delays across locations.",
+    solution:
+      "Real-time inventory intelligence with predictive alerts, surfacing stock risk per store before it became a stockout.",
     results: [
       { icon: Clock, metric: "30%", label: "Faster Delivery", color: "text-green-400" },
       { icon: TrendingUp, metric: "+8 NPS", label: "Score Improvement", color: "text-blue-400" },
       { icon: Shield, metric: "99.2%", label: "Stock Accuracy", color: "text-purple-400" },
     ],
-    technologies: ["Python", "BigQuery", "Airflow", "SQL", "Data Studio"],
-    timeline: "10 weeks",
-    testimonial: "Our stores now have complete visibility of inventory levels across all locations in real-time.",
+    technologies: ["Python", "BigQuery", "Airflow", "Forecasting"],
   },
   {
-    industry: "Finance",
-    company: "Crypto Global Exchange",
-    challenge: "Manual compliance reporting consuming 40% of team resources",
-    solution: "Automated compliance dashboard with real-time regulatory monitoring",
+    industry: "Crypto-finance",
+    company: "Global crypto-finance platform",
+    challenge: "Manual compliance reporting was consuming roughly 40% of the team's capacity.",
+    solution:
+      "Automated compliance pipeline with real-time regulatory monitoring, replacing manual report assembly end-to-end.",
     results: [
       { icon: DollarSign, metric: "$700K", label: "OPEX Saved", color: "text-green-400" },
       { icon: Clock, metric: "40%", label: "Time Reduction", color: "text-blue-400" },
       { icon: Shield, metric: "Zero", label: "Compliance Fines", color: "text-purple-400" },
     ],
     technologies: ["Python", "AWS", "Kubernetes", "SQL"],
-    timeline: "14 weeks",
-    testimonial: "We went from dreading audit season to having everything ready at the click of a button.",
   },
 ]
 
@@ -108,10 +106,10 @@ export default function CaseStudyShowcase() {
       <Container>
         <div className="text-center mb-16">
           <h2 className="case-element fade-up font-montserrat font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-4">
-            Success Stories
+            Client work
           </h2>
           <p className="case-element fade-up font-inter text-lg text-grayL max-w-2xl mx-auto">
-            Real results from real implementations across industries
+            Selected projects from our team&apos;s track record — names kept confidential, results real
           </p>
         </div>
 
@@ -159,7 +157,7 @@ export default function CaseStudyShowcase() {
                     <Badge variant="outline" className="border-accent/50 text-accent">
                       {currentStudy.industry}
                     </Badge>
-                    <span className="text-grayL text-sm">{currentStudy.timeline}</span>
+                    <span className="text-grayL/60 text-xs uppercase tracking-wider">Client confidential</span>
                   </div>
 
                   <div>
@@ -186,9 +184,6 @@ export default function CaseStudyShowcase() {
                     </div>
                   </div>
 
-                  <blockquote className="border-l-4 border-accent pl-4 italic text-grayL">
-                    "{currentStudy.testimonial}"
-                  </blockquote>
                 </div>
 
                 {/* Right Column - Results */}
