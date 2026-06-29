@@ -1,8 +1,8 @@
 "use client"
 
-import { useEffect, useRef } from "react"
 import { Shield, TrendingDown, MapPin, Zap } from "lucide-react"
 import Container from "./Container"
+import { useStaggerReveal } from "@/hooks/useStaggerReveal"
 
 const trustMetrics = [
   {
@@ -32,31 +32,7 @@ const trustMetrics = [
 ]
 
 export default function TrustIndicators() {
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const items = entry.target.querySelectorAll(".trust-item")
-            items.forEach((item, index) => {
-              setTimeout(() => {
-                item.classList.add("visible")
-              }, index * 150)
-            })
-          }
-        })
-      },
-      { threshold: 0.3 },
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
+  const sectionRef = useStaggerReveal<HTMLElement>({ childClass: "trust-item", stagger: 150, threshold: 0.3 })
 
   return (
     <section ref={sectionRef} className="py-16 bg-gradient-to-r from-navy/50 to-navy/30 border-y border-accent/10">

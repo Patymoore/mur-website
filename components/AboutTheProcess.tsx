@@ -1,9 +1,9 @@
 "use client"
 
-import { useEffect, useRef } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight, Search, Lightbulb, Code, Rocket } from "lucide-react"
 import Container from "./Container"
+import { useStaggerReveal } from "@/hooks/useStaggerReveal"
 
 const processSteps = [
   {
@@ -45,31 +45,7 @@ const processSteps = [
 ]
 
 export default function AboutTheProcess() {
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const steps = entry.target.querySelectorAll(".process-step")
-            steps.forEach((step, index) => {
-              setTimeout(() => {
-                step.classList.add("visible")
-              }, index * 300)
-            })
-          }
-        })
-      },
-      { threshold: 0.1 },
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
+  const sectionRef = useStaggerReveal<HTMLElement>({ childClass: "process-step", stagger: 300 })
 
   return (
     <section ref={sectionRef} className="py-20" id="process">

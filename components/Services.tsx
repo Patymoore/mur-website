@@ -1,11 +1,11 @@
 "use client"
 
-import { useEffect, useRef } from "react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { BarChart3, Cloud, Brain, MessageSquare, ArrowRight } from "lucide-react"
 import Container from "./Container"
 import { siteCopy } from "@/lib/constants"
+import { useStaggerReveal } from "@/hooks/useStaggerReveal"
 
 const serviceIcons = {
   "Dashboards & KPIs": BarChart3,
@@ -22,31 +22,7 @@ const serviceIndustries = {
 }
 
 export default function Services() {
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const cards = entry.target.querySelectorAll(".service-card")
-            cards.forEach((card, index) => {
-              setTimeout(() => {
-                card.classList.add("visible")
-              }, index * 200)
-            })
-          }
-        })
-      },
-      { threshold: 0.1 },
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
+  const sectionRef = useStaggerReveal<HTMLElement>({ childClass: "service-card" })
 
   return (
     <section ref={sectionRef} className="py-20" id="services">

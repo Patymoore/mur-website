@@ -1,10 +1,10 @@
 "use client"
 
-import { useEffect, useRef } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowUpRight, Ship, UtensilsCrossed } from "lucide-react"
 import Container from "./Container"
+import { useStaggerReveal } from "@/hooks/useStaggerReveal"
 
 const products = [
   {
@@ -40,31 +40,7 @@ const products = [
 ]
 
 export default function OurProducts() {
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const cards = entry.target.querySelectorAll(".product-card")
-            cards.forEach((card, index) => {
-              setTimeout(() => {
-                card.classList.add("visible")
-              }, index * 200)
-            })
-          }
-        })
-      },
-      { threshold: 0.1 },
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
+  const sectionRef = useStaggerReveal<HTMLElement>({ childClass: "product-card" })
 
   return (
     <section ref={sectionRef} className="py-20" id="products">

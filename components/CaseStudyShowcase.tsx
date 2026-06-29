@@ -1,10 +1,11 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { TrendingUp, DollarSign, Clock, Shield, ChevronLeft, ChevronRight } from "lucide-react"
 import Container from "./Container"
+import { useStaggerReveal } from "@/hooks/useStaggerReveal"
 
 const caseStudies = [
   {
@@ -53,7 +54,7 @@ const caseStudies = [
 export default function CaseStudyShowcase() {
   const [currentCase, setCurrentCase] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
-  const sectionRef = useRef<HTMLElement>(null)
+  const sectionRef = useStaggerReveal<HTMLElement>({ childClass: "case-element" })
 
   useEffect(() => {
     if (!isAutoPlaying) return
@@ -64,30 +65,6 @@ export default function CaseStudyShowcase() {
 
     return () => clearInterval(interval)
   }, [isAutoPlaying])
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const elements = entry.target.querySelectorAll(".case-element")
-            elements.forEach((element, index) => {
-              setTimeout(() => {
-                element.classList.add("visible")
-              }, index * 200)
-            })
-          }
-        })
-      },
-      { threshold: 0.1 },
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
 
   const nextCase = () => {
     setCurrentCase((prev) => (prev + 1) % caseStudies.length)

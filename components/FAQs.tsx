@@ -1,9 +1,10 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { ChevronDown, MessageCircle } from "lucide-react"
 import Container from "./Container"
+import { useStaggerReveal } from "@/hooks/useStaggerReveal"
 
 const faqCategories = [
   {
@@ -75,31 +76,7 @@ const faqCategories = [
 
 export default function FAQs() {
   const [openItems, setOpenItems] = useState<{ [key: string]: boolean }>({})
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const items = entry.target.querySelectorAll(".faq-category")
-            items.forEach((item, index) => {
-              setTimeout(() => {
-                item.classList.add("visible")
-              }, index * 200)
-            })
-          }
-        })
-      },
-      { threshold: 0.1 },
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
+  const sectionRef = useStaggerReveal<HTMLElement>({ childClass: "faq-category" })
 
   const toggleItem = (key: string) => {
     setOpenItems((prev) => ({

@@ -15,6 +15,7 @@ export default function ContactUs() {
     name: "",
     email: "",
     message: "",
+    company: "", // honeypot — kept empty by real users
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
@@ -32,7 +33,7 @@ export default function ContactUs() {
 
       if (response.ok) {
         setSubmitStatus("success")
-        setFormData({ name: "", email: "", message: "" })
+        setFormData({ name: "", email: "", message: "", company: "" })
       } else {
         setSubmitStatus("error")
       }
@@ -53,7 +54,7 @@ export default function ContactUs() {
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-4">Contact Us</h2>
           <p className="font-inter text-lg text-grayL max-w-2xl mx-auto">
-            Ready to transform your data into actionable insights? Let&apos;s discuss your project.
+            Ready to put AI to work in your operations? Tell us the problem — we&apos;ll tell you if it&apos;s a fit.
           </p>
         </div>
 
@@ -67,6 +68,17 @@ export default function ContactUs() {
               </CardHeader>
               <CardContent className="pt-0">
                 <form onSubmit={handleSubmit} className="space-y-3">
+                  {/* Honeypot — visually hidden, ignored by humans, filled by bots */}
+                  <input
+                    type="text"
+                    name="company"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    value={formData.company}
+                    onChange={handleChange}
+                    className="absolute left-[-9999px] h-0 w-0 opacity-0"
+                  />
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <Input
                       name="name"

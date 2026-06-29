@@ -1,9 +1,9 @@
 "use client"
 
-import { useEffect, useRef } from "react"
 import { Target, Users, Award } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import Container from "./Container"
+import { useStaggerReveal } from "@/hooks/useStaggerReveal"
 
 const missionValues = [
   {
@@ -27,31 +27,7 @@ const missionValues = [
 ]
 
 export default function AboutUs() {
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const elements = entry.target.querySelectorAll(".about-element")
-            elements.forEach((element, index) => {
-              setTimeout(() => {
-                element.classList.add("visible")
-              }, index * 200)
-            })
-          }
-        })
-      },
-      { threshold: 0.1 },
-    )
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
+  const sectionRef = useStaggerReveal<HTMLElement>({ childClass: "about-element" })
 
   return (
     <section ref={sectionRef} className="py-20" id="about">
