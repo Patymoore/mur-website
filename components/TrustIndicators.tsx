@@ -1,33 +1,33 @@
 "use client"
 
 import { useEffect, useRef } from "react"
-import { Shield, Users, Zap, TrendingDown } from "lucide-react"
+import { Shield, TrendingDown, MapPin, Zap } from "lucide-react"
 import Container from "./Container"
 
 const trustMetrics = [
   {
     icon: Shield,
-    value: "99.9%",
-    label: "Uptime Guarantee",
-    description: "Enterprise-grade reliability",
+    value: "GDPR-native",
+    label: "Data protection by design",
+    description: "Your data, your control — DPA in place",
   },
   {
     icon: TrendingDown,
     value: "Up to 60%",
-    label: "Reduction in Manual Tasks",
+    label: "Less manual work",
     description: "Automating data workflows to boost efficiency",
   },
   {
-    icon: Users,
-    value: "Fortune 500",
-    label: "Clients",
-    description: "Trusted by industry leaders",
+    icon: MapPin,
+    value: "Built in Spain",
+    label: "EU-based team",
+    description: "Designed for European and global operators",
   },
   {
     icon: Zap,
-    value: "< 48h",
-    label: "Response Time",
-    description: "Priority support included",
+    value: "< 24h",
+    label: "Response time",
+    description: "Direct line to senior engineers",
   },
 ]
 

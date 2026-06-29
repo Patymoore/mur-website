@@ -34,12 +34,6 @@ export const siteCopy = {
       desc: "Assistants trained on your data — 24/7 support, less manual load.",
     },
   ],
-  success: [
-    "-15% accounting errors, US $1.3 M/mo revenue safeguarded",
-    "30% faster fulfilment, +8 NPS after 24-h delivery rollout",
-    "US $700 K OPEX saved, zero fines via automated compliance",
-    "40% less manual reporting time, compliance dashboards in real time",
-  ],
   about: {
     links: {
       linkedin: "https://www.linkedin.com/company/mur-solutions",

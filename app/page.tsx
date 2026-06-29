@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar"
 import SolutionsSection from "@/components/SolutionsSection"
 import AboutUs from "@/components/AboutUs"
-import SuccessStories from "@/components/SuccessStories"
+import CaseStudyShowcase from "@/components/CaseStudyShowcase"
 import AboutTheProcess from "@/components/AboutTheProcess"
 import FAQs from "@/components/FAQs"
 import ContactUs from "@/components/ContactUs"
@@ -14,7 +14,7 @@ export default function Home() {
       <main>
         <SolutionsSection />
         <AboutUs />
-        <SuccessStories />
+        <CaseStudyShowcase />
         <AboutTheProcess />
         <FAQs />
         <ContactUs />

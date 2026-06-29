@@ -55,15 +55,15 @@ This service is intended exclusively for business clients aged 18 or over. MUR S
   {
     id: "processors",
     title: "4. Sub-processors",
-    content: `To deliver the service, we share data with the following technology providers acting as data processors:
+    content: `To deliver our services we rely on the following technology providers acting as sub-processors:
 
-- **Clerk** — identity and authentication management (USA) · clerk.com/privacy
-- **Neon / PostgreSQL** — cloud database storage (USA/EU)
-- **Vercel** — hosting and deployment infrastructure (USA/EU)
-- **Sentry** — error monitoring and application tracing (USA)
-- **Upstash** — rate limiting (USA/EU)
+- **Vercel** — hosting and deployment infrastructure (US/EU)
+- **Neon / PostgreSQL** — cloud database storage (EU)
+- **Resend** — transactional email (EU)
+- **Sentry** — error monitoring and tracing, PII scrubbed (US, DPF certified)
+- **Clerk** — authentication, where an account is provisioned (US, DPF certified)
 
-All sub-processors are bound by Data Processing Agreements (DPAs) and comply with GDPR. We do not sell or share data with third parties for advertising purposes.`,
+All sub-processors are bound by Data Processing Agreements and comply with GDPR. We do not sell or share data with third parties for advertising purposes. Where we process personal data on behalf of a client, we act as Processor and the client acts as Controller — see our Data Processing Agreement at /dpa.`,
   },
   {
     id: "transfers",
