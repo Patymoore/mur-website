@@ -94,14 +94,16 @@ export default function CaseStudyShowcase() {
           {/* Navigation */}
           <div className="case-element fade-up flex justify-between items-center mb-8">
             <div className="flex space-x-2">
-              {caseStudies.map((_, index) => (
+              {caseStudies.map((study, index) => (
                 <button
                   key={index}
                   onClick={() => {
                     setCurrentCase(index)
                     setIsAutoPlaying(false)
                   }}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  aria-label={`Show ${study.industry} case study`}
+                  aria-current={index === currentCase}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent ${
                     index === currentCase ? "bg-accent scale-125" : "bg-grayD hover:bg-accent/50"
                   }`}
                 />
@@ -111,13 +113,15 @@ export default function CaseStudyShowcase() {
             <div className="flex space-x-2">
               <button
                 onClick={prevCase}
-                className="w-10 h-10 bg-navy/50 border border-grayD/30 rounded-full flex items-center justify-center hover:border-accent/50 transition-colors"
+                aria-label="Previous case study"
+                className="w-10 h-10 bg-navy/50 border border-grayD/30 rounded-full flex items-center justify-center hover:border-accent/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <ChevronLeft className="text-accent" size={20} />
               </button>
               <button
                 onClick={nextCase}
-                className="w-10 h-10 bg-navy/50 border border-grayD/30 rounded-full flex items-center justify-center hover:border-accent/50 transition-colors"
+                aria-label="Next case study"
+                className="w-10 h-10 bg-navy/50 border border-grayD/30 rounded-full flex items-center justify-center hover:border-accent/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <ChevronRight className="text-accent" size={20} />
               </button>

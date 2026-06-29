@@ -107,6 +107,7 @@ export default function Navbar() {
               onClick={toggleMobileMenu}
               className="text-white hover:text-accent transition-colors p-2"
               aria-label="Toggle mobile menu"
+              aria-expanded={isMobileMenuOpen}
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
